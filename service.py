@@ -56,6 +56,7 @@ def get_args() -> Namespace:
     parser = ArgumentParser()
     parser.add_argument(
         "--language",
+        default="en",
         type=str,
         help="Language to use for UD pipelines.",
     )

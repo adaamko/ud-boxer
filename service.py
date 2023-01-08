@@ -11,7 +11,7 @@ from ud_boxer.grew_rewrite import Grew
 from ud_boxer.ud import UDGraph, UDParser
 
 app = Flask(__name__)
-HOST = "localhost"
+HOST = "0.0.0.0"
 PORT = 5002
 OUTPUT_DIR = "./results"
 

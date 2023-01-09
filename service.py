@@ -76,4 +76,4 @@ if __name__ == "__main__":
     global GREW
     GREW = Grew(language=args.language)
 
-    app.run(host=HOST, port=PORT, debug=True)
+    app.run(host=HOST, port=PORT, debug=False)

@@ -9,9 +9,6 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 from ud_boxer.config import Config
 from ud_boxer.grew_rewrite import Grew
 from ud_boxer.ud import UDGraph, UDParser
-import os
-
-os.system('eval $(opam env)')
 
 app = Flask(__name__)
 HOST = "0.0.0.0"

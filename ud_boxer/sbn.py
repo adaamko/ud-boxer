@@ -276,6 +276,7 @@ class SBNGraph(BaseGraph):
         # First collect all nodes and create a mapping from the grew ids to
         # the current graph ids.
         for grew_node_id, (node_data, _) in grew_graph.items():
+            node_data['token_id'] = grew_node_id
             node_components = RESOLVER.node_token_type(node_data)
             node = self.create_node(*node_components)
             id_mapping[grew_node_id] = node[0]

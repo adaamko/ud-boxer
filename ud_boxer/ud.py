@@ -211,7 +211,7 @@ class UDParser:
         self.pipeline = pipeline
         self.write_output = write_output
 
-    def parse(self, text: str, out_file: PathLike) -> Path:
+    def parse(self, text: str, out_file: PathLike, return_output: bool = False) -> Path:
         """
         Generate a UD parse from the input text and store it in conll format
         at the provided path.
@@ -220,6 +220,8 @@ class UDParser:
         result = self.pipeline(text)
         self.write_output(result, out_file)
 
+        if return_output:
+            return out_file, result
         return out_file
 
     def parse_path(self, text_file: PathLike, out_file: PathLike) -> Path:

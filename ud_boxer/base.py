@@ -77,7 +77,7 @@ class BaseGraph(nx.DiGraph):
                     token_id,
                     **{
                         "label": f'{self._node_label(node_data).replace(":", "-")}',
-                        "token_id": node_data.get('token_id'),
+                        "token_id": node_data.get('token_id', 'null'),
                         **self.type_style_mapping[node_data["type"]],
                     },
                 )
